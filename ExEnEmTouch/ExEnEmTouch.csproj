@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F7E52764-6042-4D0D-AAB6-E7938B88B93D}</ProjectGuid>
+    <ProjectTypeGuids>{6BC8ED88-2882-458C-8E55-DFD12B67127B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Microsoft.Xna.Framework</RootNamespace>
+    <AssemblyName>ExEnEmTouch</AssemblyName>
+    <MtouchSdkVersion>3.2</MtouchSdkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchDebug>true</MtouchDebug>
+    <ConsolePause>false</ConsolePause>
+    <MtouchLink>None</MtouchLink>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchLink>None</MtouchLink>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchDebug>true</MtouchDebug>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="monotouch" />
+    <Reference Include="OpenTK" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ExEnCore\ExEnCore MonoTouch.csproj">
+      <Project>{4740C1D7-5EE0-43AC-A862-45B8D245FC43}</Project>
+      <Name>ExEnCore MonoTouch</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Compile Include="..\ExEnCommon\GameComponents\DrawableGameComponent.cs">
+      <Link>GameComponents\DrawableGameComponent.cs</Link>
+    </Compile>
+    <Compile Include="..\ExEnCommon\GameComponents\GameComponent.cs">
+      <Link>GameComponents\GameComponent.cs</Link>
+    </Compile>
+    <Compile Include="..\ExEnCommon\GameComponents\GameComponentCollection.cs">
+      <Link>GameComponents\GameComponentCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\ExEnCommon\GameComponents\GameServiceContainer.cs">
+      <Link>GameComponents\GameServiceContainer.cs</Link>
+    </Compile>
+    <Compile Include="..\ExEnCommon\GameComponents\IDrawable.cs">
+      <Link>GameComponents\IDrawable.cs</Link>
+    </Compile>
+    <Compile Include="..\ExEnCommon\GameComponents\IGameComponent.cs">
+      <Link>GameComponents\IGameComponent.cs</Link>
+    </Compile>
+    <Compile Include="..\ExEnCommon\GameComponents\IUpdateable.cs">
+      <Link>GameComponents\IUpdateable.cs</Link>
+    </Compile>
+    <Compile Include="..\ExEnCommon\Game\GameCommon.cs">
+      <Link>Game\GameCommon.cs</Link>
+    </Compile>
+    <Compile Include="..\ExEnCommon\Game\GameWindow.cs">
+      <Link>Game\GameWindow.cs</Link>
+    </Compile>
+    <Compile Include="..\ExEnCommon\Game\GraphicsDeviceManagerCommon.cs">
+      <Link>Game\GraphicsDeviceManagerCommon.cs</Link>
+    </Compile>
+    <Compile Include="..\ExEnCommon\Graphics\SpriteFontBitmap.cs">
+      <Link>Graphics\SpriteFontBitmap.cs</Link>
+    </Compile>
+    <Compile Include="..\ExEnCommon\Input\Touch\TouchPanel.cs">
+      <Link>Input\Touch\TouchPanel.cs</Link>
+    </Compile>
+    <Compile Include="Audio\AudioSessionManager.cs" />
+    <Compile Include="Audio\SoundEffect.cs" />
+    <Compile Include="Audio\SoundEffectInstance.cs" />
+    <Compile Include="BatteryChargeStatus.cs" />
+    <Compile Include="ExEnEmTouchApplication.cs" />
+    <Compile Include="ExEnEmTouchGameView.cs" />
+    <Compile Include="Extensions\PointFExtensions.cs" />
+    <Compile Include="Game\Game.cs" />
+    <Compile Include="Game\GraphicsDeviceManager.cs" />
+    <Compile Include="Graphics\SurfaceFormat.cs" />
+    <Compile Include="Graphics\Texture2D.cs" />
+    <Compile Include="Input\Keyboard.cs" />
+    <Compile Include="Media\MediaPlayer.cs" />
+    <Compile Include="Media\Song.cs" />
+    <Compile Include="PerformanceCounter.cs" />
+    <Compile Include="PowerLineStatus.cs" />
+    <Compile Include="PowerStatus.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReusableItemList.cs" />
+    <Compile Include="Storage\StorageContainer.cs" />
+    <Compile Include="Storage\StorageDevice.cs" />
+    <Compile Include="..\ExEnCommon\Graphics\GraphicsDeviceCommon.cs">
+      <Link>Graphics\GraphicsDeviceCommon.cs</Link>
+    </Compile>
+    <Compile Include="..\ExEnCommon\Graphics\IGraphicsDeviceService.cs">
+      <Link>Graphics\IGraphicsDeviceService.cs</Link>
+    </Compile>
+    <Compile Include="Content\BuiltInLoaders.cs" />
+    <Compile Include="Content\ContentHelpers.cs" />
+    <Compile Include="..\ExEnCommon\Graphics\Texture2DOpenGL.cs">
+      <Link>Graphics\Texture2DOpenGL.cs</Link>
+    </Compile>
+    <Compile Include="..\ExEnCommon\Graphics\SpriteBatchOpenGL.cs">
+      <Link>Graphics\SpriteBatchOpenGL.cs</Link>
+    </Compile>
+    <Compile Include="..\ExEnCommon\Graphics\StatesOpenGL\BlendState.cs">
+      <Link>Graphics\States\BlendState.cs</Link>
+    </Compile>
+    <Compile Include="..\ExEnCommon\Graphics\StatesOpenGL\DepthStencilState.cs">
+      <Link>Graphics\States\DepthStencilState.cs</Link>
+    </Compile>
+    <Compile Include="..\ExEnCommon\Graphics\StatesOpenGL\RasterizerState.cs">
+      <Link>Graphics\States\RasterizerState.cs</Link>
+    </Compile>
+    <Compile Include="..\ExEnCommon\Graphics\StatesOpenGL\SamplerState.cs">
+      <Link>Graphics\States\SamplerState.cs</Link>
+    </Compile>
+    <Compile Include="..\ExEnCommon\Audio\SoundEffectFireAndForget.cs">
+      <Link>Audio\SoundEffectFireAndForget.cs</Link>
+    </Compile>
+    <Compile Include="..\ExEnCommon\Input\Touch\TouchInputManager.cs">
+      <Link>Input\Touch\TouchInputManager.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Graphics\States\" />
+  </ItemGroup>
+</Project>

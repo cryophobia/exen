@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Web Developer Express 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlankGame Silverlight", "BlankGame\BlankGame Silverlight.csproj", "{D05BD5F8-25DA-4543-90E3-631375D54336}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExEnCore Silverlight", "ExEnCore\ExEnCore Silverlight.csproj", "{7D87751B-AEF3-4ED6-BC1D-A3826363A5B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExEnSilver", "ExEnSilver\ExEnSilver.csproj", "{5A28896D-B208-4130-B41E-C77B7C14482A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Marblets Silverlight", "Samples\Marblets\Marblets Silverlight.csproj", "{71647C05-64D4-43E8-B034-C84274FB8A26}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CatGirls Silverlight", "Samples\CatGirls\CatGirls Silverlight.csproj", "{39080292-6D2A-4F72-B052-6D095BC0A6F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orientation Silverlight", "Samples\Orientation\Orientation Silverlight.csproj", "{7CB355D3-3AF3-4A6A-830D-47DB42B8065F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D05BD5F8-25DA-4543-90E3-631375D54336}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D05BD5F8-25DA-4543-90E3-631375D54336}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D05BD5F8-25DA-4543-90E3-631375D54336}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D05BD5F8-25DA-4543-90E3-631375D54336}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D87751B-AEF3-4ED6-BC1D-A3826363A5B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D87751B-AEF3-4ED6-BC1D-A3826363A5B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D87751B-AEF3-4ED6-BC1D-A3826363A5B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D87751B-AEF3-4ED6-BC1D-A3826363A5B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A28896D-B208-4130-B41E-C77B7C14482A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A28896D-B208-4130-B41E-C77B7C14482A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A28896D-B208-4130-B41E-C77B7C14482A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A28896D-B208-4130-B41E-C77B7C14482A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71647C05-64D4-43E8-B034-C84274FB8A26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71647C05-64D4-43E8-B034-C84274FB8A26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71647C05-64D4-43E8-B034-C84274FB8A26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71647C05-64D4-43E8-B034-C84274FB8A26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39080292-6D2A-4F72-B052-6D095BC0A6F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39080292-6D2A-4F72-B052-6D095BC0A6F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39080292-6D2A-4F72-B052-6D095BC0A6F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39080292-6D2A-4F72-B052-6D095BC0A6F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CB355D3-3AF3-4A6A-830D-47DB42B8065F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CB355D3-3AF3-4A6A-830D-47DB42B8065F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CB355D3-3AF3-4A6A-830D-47DB42B8065F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CB355D3-3AF3-4A6A-830D-47DB42B8065F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,43 @@
+'''Using TTF fonts on Silverlight is recommended for performance reasons.''' However `exenfont` files are also supported if you need them.
+
+First of all you need a TTF file for your font. All the usual warnings about font copyright apply. My '''I-am-not-a-lawyer''' understanding of the situation ''in the USA'' is outlined in [http://gamedev.stackexchange.com/questions/2666/using-a-particular-font-in-a-commercial-game/2670#2670 this answer on StackExcahnge]. If you're looking for a distributable font, [http://www.fontsquirrel.com/ Font Squirrel] is a great website. Generally speaking if you can distribute it as a bitmap font, you can probably distribute the original TTF.
+
+Take your TTF and put it somewhere into your project in Visual Studio. Unlike most other content types, leave its Build Action set to "Resource" (the default).
+
+Make a note of the following properties of your font:
+ * The name of the '''assembly''' (the output dll, ''without'' the `.dll` extension) that includes the TTF file you just added
+ * The '''path''' to the TTF file in the assembly (eg: "`Content/Fonts`")
+ * The '''filename''' of the TTF file (eg: "`NGO_____.TTF`")
+ * The name of the '''font face''' (eg: "`News Gothic`")
+
+As well as the '''asset name''' of the font (the name you use to load it with XNA's `ContentManager`) and the '''size''' you would use for it in your `.spritefont` file on XNA.
+
+Then you need to include this code to register your TTF font, before it comes time to load it. I recommend putting the registration into your `SetupMainPage` method, in your app class derived from `ExEnSilverApplication`, as this is before any fonts will be loaded, and will only be included in the Silverlight version of your game.
+
+{{{
+FontSource fontSource = new FontSource(Application.GetResourceStream(
+        new Uri("/<ASSEMBLY NAME>;component/<PATH TO TTF>/<TTF FILENAME>", UriKind.Relative)).Stream);
+FontFamily fontFamily = new FontFamily("<FONT FACE>");
+
+ContentManager.SilverlightFontTranslation("<ASSET NAME>", new SpriteFontTTF(fontSource, fontFamily, <SIZE>));
+}}}
+
+So, for example, this is the [http://trac.andrewrussell.net/ExEn/browser/trunk/Samples/CatGirls/Silverlight%20Application.cs code from the Cat Girls sample], to load "News Gothic" as "UIFont", with the TTF file placed in the "Content" directory:
+
+{{{
+FontSource uiFontSource = new FontSource(Application.GetResourceStream(
+                          new Uri("/CatGirls;component/Content/NGO_____.TTF", UriKind.Relative)).Stream);
+FontFamily uiFontFamily = new FontFamily("News Gothic");
+
+ContentManager.SilverlightFontTranslation("UIFont", new SpriteFontTTF(uiFontSource, uiFontFamily, 16));
+}}}
+
+Silverlight uses a font fallback mechanism, so if your font load doesn't work (for example: you didn't include the TTF properly, or you got its path or assembly name wrong), it will fail ''silently'' and go to a fallback font. If the fallback font (I think it is Arial) is similar to the font you are trying to use, you may not notice. You can make use of the fallback mechanism to detect a failed font load by adding a very different font to the fallback chain. Here is an example. I recommend not leaving this code in, once you have your TTF font working.
+
+{{{
+FontFamily uiFontFamily = new FontFamily("News Gothic,Comic Sans MS");
+}}}
+
+'''IMPORTANT NOTE''': Silverlight contains a mechanism for specifying the `FontSource` when you construct the `FontFamily`. My testing indicates that ''this is buggy'' on Silverlight 3 (and possibly other versions). Do not use it.
+
+You can also make use of Silverlight's built-in fonts ([http://blogs.silverlight.net/blogs/msnow/archive/2008/09/25/silverlight-tip-of-the-day-46-font-support-in-silverlight.aspx see the list here]). But those fonts are pretty boring, and you probably don't have a licence to distribute them as bitmap-fonts on other platforms.

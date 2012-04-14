@@ -1,0 +1,88 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>ExEn - The Porting Checklist</title>
+</head>
+<body>	
+	
+<h1 id="ThePortingChecklist">The Porting Checklist</h1>
+<ul><li>Create an XNA 4.0 project as you normally would
+</li><li>Move the content project folder into your game project folder with the same name as its output directly (the same layout as used in XNA 3.1)
+<ul><li>If you don't do this, you'll have to figure out how to get the content to land in the right spot during Silverlight and iOS builds, ExEn has no content pipeline.
+</li><li>You'll probably need to reload the project and re-link the content project
+</li></ul></li><li>Change the content processor (properties pane: press F4) used for sprite fonts files to one of the shim processors provided by <tt>ExEnFontShim</tt>
+<ul><li>You will need to build <tt>ExEnFontShim</tt> and add it as a reference to your content project first
+</li><li>If you are using ExEn stand-alone, you will still need XNA Game Studio and an XNA game project (even a blank one) to do this
+</li><li>For <tt>.spritefont</tt> (sprite font description) files it is recommended to use "ExEn Font Shim - Nuclex Sprite Font" for better quality, but a shim for the original XNA processor is also available ("ExEn Font Shim - Sprite Font Description")
+<ul><li>These will generate <tt>@2x</tt> resources for a retina display automatically
+</li></ul></li><li>There is also a ExEn Font Shim version of the Sprite Font Texture processor
+<ul><li>This will generate an <tt>@2x</tt> resource for the retina display, <i>if</i> there is an <tt>@2x</tt> texture file next to the one that is included in the content pipeline (you <strong>don't</strong> need to add the <tt>@2x</tt> file to your content project!)
+</li></ul></li></ul></li><li>Be sure to set PreferredBackBufferWidth/Height for the target platform and desired orientation. Look at CatGirls for some ideas. I'll try to come up with something better later.
+</li><li>Create a version for Xbox 360 or WP7, if you like. Use the built-in mechanism for XNA.
+<ul><li>Probably rename the project file so you can easily have multiple versions for each platform. (eg: "CatGirls XNA", "CatGirls WP7", "CatGirls Silverlight", "CatGirls MonoTouch")
+</li><li>XNA will keep XNA projects in the same solution in-sync. But for the ExEn platforms you'll just have to do it manually.
+</li><li>Tip for cross-platform XNA development: Tools, Options, Show all settings (express edition), Projects and Solutions, Build and Run, "Only build start up projects and dependencies on Run". (This had been driving me nuts until I found out about this just now.)
+</li></ul></li><li>Copy the following files from the project BlankGame into your game project and rename them as appropriate (I will automate all the project-messing-about later). The reason for not using the default template projects is that my ones have some special options to stop them clobbering each other in the build directories (also have the references set nicely for you)
+<ul><li>BlankGame Silverlight.csproj
+</li><li>BlankGame MonoTouch.csproj
+</li><li>BlankGame MTWinDev.csproj
+</li><li>MonoTouch Program.cs
+</li><li>Silverlight Application.cs
+</li><li>TestPageDebug.html
+</li><li>Info.plist
+</li></ul></li><li>ASIDE: if you are trying to compile a <strong>library</strong>, you will need to copy <i>library</i> project files instead of application ones. Use <tt>ExEnEmTouch.csproj</tt>, <tt>ExEnEmTouch MTWinDev.csproj</tt> and <tt>ExEnSilver.csproj</tt> (and you don't need any of the other files)
+</li><li>Change the namespaces used in the two .cs files to match your game
+</li><li>Open up the three <tt>csproj</tt> files in a text editor and replace the following values to match your game (some of these do not apply to libraries)
+<ul><li>RootNamespace
+</li><li>AssemblyName
+</li><li>BundleIdentifier (MonoTouch only)
+</li><li>BundleDisplayName (MonoTouch only)
+</li><li>XapFilename (Silverlight only)
+</li><li>SilverlightAppEntry (Silverlight only – this is a namespace and class name matching Silverlight Application.cs. Setting this incorrectly will cause a very obscure error message on startup.)
+</li><li>DELETE ProjectGuid (it will be recreated by Visual Studio with a new ID)
+</li></ul></li><li>You may also want to ensure that each HintPath used for the references in MTWinDev is correct (don't worry about the ProjectReference items, VS/MD can fix those up itself).
+</li><li>Change the .xap referenced by TestPageDebug.html
+<ul><li>The HTML file is like the default, but has enableGPUAcceleration set.
+</li><li>Tip: You may need IE to debug Silverlight (Chrome, for example, does not allow the debugger to attach). You can select an IDE-wide default browser, but I can't find the setting just now.
+</li></ul></li><li>You could simply replace the source (.cs) files referenced by these projects in the IDE. But while you are text-editing the project files you could also copy the &lt;ItemGroup&gt; that contains the &lt;Compile&gt; items from your XNA project over the top of the ones in the other projects.
+<ul><li>When you do this, the XNA "Program.cs" file needs to be replaced with "MonoTouch Program.cs" (MonoTouch, MTWinDev) or "Silverlight Application.cs" (Silverlight).
+</li></ul></li><li>Modify Info.plist to suit your project (refer to Apple's documentation)
+</li><li>Now go to each solution and use "Add Existing Project" to add the projects that were created/copied
+</li><li>MTWinDev doesn't run, so it doesn't need content
+</li><li>Adding content on MonoTouch:
+<ul><li>Right click the project, Add, Add Files
+</li><li>Go into the Content directory (see earlier about where to put your Content project)
+</li><li>Select your content files        
+<ul><li>Textures should be PNG or JPEG
+</li><li>Sprite-fonts will be <tt>-exenfont.png</tt> <i>and</i> <tt>-exenfont.exenfont</tt> and their <tt>@2x</tt> variants
+</li><li>SoundEffects should be WAV files
+</li><li>Songs should be MP3 files
+</li><li>For textures at retina-display sizes, create resources that are twice the dimensions and append "@2x" to the file name. Add those as well. (Selecting the correct version at runtime is handled automatically by iOS (for textures) or ExEn (for sprite fonts))
+</li></ul></li><li>Check "override default build action" and set it to "Content" (this adds them to your application's "bundle")
+</li><li>Press Open to add those content files
+</li><li>If you have multiple directories of content, repeat this for each directory
+</li></ul></li><li>Adding content on Silverlight:
+<ul><li>In order to keep directory structure it is easiest to just drag and drop your Content directory into the project, and then "Exclude From Project" (not delete, obviously) everything you don't want
+<ul><li>You don't want: the bin and obj directories, any source control directories (eg: .svn), the XNA .contentproj file, any .spritefont files, any @2x content files.
+</li></ul></li><li>Select all the files that are left (except any TTF files and MP3 files), press F4 to bring up the Properties window, and set their Build Action to "Content".
+</li><li>Because you want to keep the Silverlight XAP download size to a minimum, it may help to create special JPEG versions of your textures where they don't need transparency.
+</li><li>For TTF-based <tt>SpriteFont</tt>s on Silverlight (recommended for performance), see Using TTF Fonts on Silverlight
+</li><li>For Bitmap-based <tt>SpriteFont</tt>s on Silverlight (using TTF is recommended, if possible):
+<ul><li>Add the <tt>-exenfont.png</tt> and <tt>-exenfont.exenfont</tt> files generated by <tt>ExEnFontShim</tt> to your project and set their Build Action to "Content". Leave out the <tt>@2x</tt> files, they are only used on iOS.
+</li></ul></li><li>To do songs on Silverlight:
+<ul><li>Songs on Silverlight are stored outside the XAP so that they can be downloaded independently. Thus reducing the initial download time and also allowing them to start playing before being fully downloaded.
+</li><li>Set their "Build Action" to "None", and their "Copy to Output" to "Copy if newer". 
+</li><li>Don't forget to copy them to your webserver, along with your game.
+</li><li>The path that Silverlight will look for Songs on is a bit complicated. It's relative to the root XAML file (or the XAP containing the DLL containing the XAML file – normally: your XAP, the ExEnSilver DLL, the MainPage.xaml file). If you just preserve the directory structure when you deploy you should be ok.
+</li></ul></li><li>To restate Silverlight deployment: Copy the XAP file and any Content directories that are next to it, preserving their structure, to your webserver. You can ignore all the other files (DLL, PDB, etc). Then reference the XAP file from HTML as normal.
+</li></ul></li><li>Go through your project and add calls to the HintFunctions as necessary.
+<ul><li>So far Hint functions are only used on Silverlight
+</li><li>The first three hints are explained <a class="ext-link" href="http://andrewrussell.net/2010/12/xna-spritebatch-in-silverlight-with-exen/"><span class="icon">here on my blog</span></a>
+</li><li>Anywhere where you are animating the colour of a sprite (fading between colours), wrap it in HintDynamicColor
+</li><li>Anywhere where you are animating the source rectangle of a sprite, wrap it in HintDynamicRectangle
+</li><li>If you are sandwiching hardware surfaces between two or more software surfaces (eg: using LineBatch, using HintDynamicColor), you may get better performance if you disable hardware caching on the surfaces in between (using HintDisableCache) allowing Silverlight to use just one Software surface for the lot. The number of software surfaces is the last item on the hardware framerate counter.
+</li><li>You can use HintClipEnable to clip the game window down to the viewport size (otherwise content will be visible outside what ExEn reports as the Viewport). Note that this has very serious performance implications and should never be used if you have any software surfaces in your game. The preferred method is to simply set the size of the Silverlight plugin to match what your game uses.
+</li><li>You can use HintBeginPreload on Songs to start them downloading before you need to play them.
+</li></ul></li></ul>
+
+</body>
+</html>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>CatGirls</RootNamespace>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <AndroidResgenClass>Resource</AndroidResgenClass>
+    <AndroidApplication>True</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+    <AssemblyName>CatGirls</AssemblyName>
+    <TargetFrameworkVersion>v2.1</TargetFrameworkVersion>
+    <ProjectGuid>{F753B3BA-1D30-439C-B277-FAB19B3B1EE7}</ProjectGuid>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Android\Debug</OutputPath>
+    <DefineConstants>DEBUG ANDROID</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <AndroidLinkMode>None</AndroidLinkMode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Android\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <ConsolePause>false</ConsolePause>
+    <AndroidLinkMode>SdkOnly</AndroidLinkMode>
+    <DefineConstants>ANDROID</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Mono.Android" />
+    <Reference Include="OpenTK" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\Button.cs" />
+    <Compile Include="Controls\Control.cs" />
+    <Compile Include="Controls\Slider.cs" />
+    <Compile Include="ExEnSilverCompatibility.cs" />
+    <Compile Include="FrameworkExtensions.cs" />
+    <Compile Include="NamedScreenSizes.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="CatGirlsGame.cs" />
+    <Compile Include="TestMenu.cs" />
+    <Compile Include="Tests\BlankScreen.cs" />
+    <Compile Include="Tests\CatGirlSprite.cs" />
+    <Compile Include="Tests\ColorTest.cs" />
+    <Compile Include="Tests\MouseInputTest.cs" />
+    <Compile Include="Tests\ScreenSize.cs" />
+    <Compile Include="Tests\SpriteFontTest.cs" />
+    <Compile Include="Tests\Test.cs" />
+    <Compile Include="Tests\ViewportTest.cs" />
+    <Compile Include="Android Activity.cs" />
+    <Compile Include="Resources\Resource.designer.cs" />
+    <Compile Include="MonoTouchCompatibility.cs" />
+    <Compile Include="Tests\MusicTest.cs" />
+    <Compile Include="Tests\TimingTest.cs" />
+    <Compile Include="Tests\TouchInputTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AboutResources.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\Main.axml" />
+    <AndroidResource Include="Resources\values\Strings.xml" />
+    <AndroidResource Include="Resources\drawable\Icon.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\..\ExEnAndroid\ExEnAndroid.csproj">
+      <Project>{408B170B-BAFC-4638-9211-E59125830E2E}</Project>
+      <Name>ExEnAndroid</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ExEnCore\ExEnCore Android.csproj">
+      <Project>{6622CF5F-D0D3-4154-A426-D334799ADC0E}</Project>
+      <Name>ExEnCore Android</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Content\Back.png" />
+    <AndroidAsset Include="Content\CatGirl.png" />
+    <AndroidAsset Include="Content\CatGirlIcon.png" />
+    <AndroidAsset Include="Content\Corner.png" />
+    <AndroidAsset Include="Content\Cursor.png" />
+    <AndroidAsset Include="Content\FancyFont-exenfont.exenfont" />
+    <AndroidAsset Include="Content\FancyFont-exenfont.png" />
+    <AndroidAsset Include="Content\gradient.png" />
+    <AndroidAsset Include="Content\handle.png" />
+    <AndroidAsset Include="Content\RubbishFont-exenfont.exenfont" />
+    <AndroidAsset Include="Content\RubbishFont-exenfont.png" />
+    <AndroidAsset Include="Content\UIFont-exenfont.exenfont" />
+    <AndroidAsset Include="Content\UIFont-exenfont.png" />
+    <AndroidAsset Include="Content\WhiteBox.png" />
+    <AndroidAsset Include="Content\Short Disco.mp3" />
+    <AndroidAsset Include="Content\ding.wav" />
+    <AndroidAsset Include="Content\motor.wav" />
+  </ItemGroup>
+</Project>

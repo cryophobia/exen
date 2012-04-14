@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1C7408DF-F179-4540-B3D0-CE068C27CE1E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Microsoft.Xna.Framework</RootNamespace>
+    <AssemblyName>ExEnEmTouch</AssemblyName>
+    <TargetFrameworkVersion>v3.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\MonoTouch\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\MonoTouch\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ItemGroup>
+    <Reference Include="monotouch, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MTWinDev References\monotouch.dll</HintPath>
+    </Reference>
+    <Reference Include="mscorlib, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MTWinDev References\mscorlib.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenTK, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MTWinDev References\OpenTK.dll</HintPath>
+    </Reference>
+    <Reference Include="System, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MTWinDev References\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MTWinDev References\System.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MTWinDev References\System.Xml.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\ExEnCommon\Audio\SoundEffectFireAndForget.cs">
+      <Link>Audio\SoundEffectFireAndForget.cs</Link>
+    </Compile>
+    <Compile Include="..\ExEnCommon\GameComponents\DrawableGameComponent.cs">
+      <Link>GameComponents\DrawableGameComponent.cs</Link>
+    </Compile>
+    <Compile Include="..\ExEnCommon\GameComponents\GameComponent.cs">
+      <Link>GameComponents\GameComponent.cs</Link>
+    </Compile>
+    <Compile Include="..\ExEnCommon\GameComponents\GameComponentCollection.cs">
+      <Link>GameComponents\GameComponentCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\ExEnCommon\GameComponents\GameServiceContainer.cs">
+      <Link>GameComponents\GameServiceContainer.cs</Link>
+    </Compile>
+    <Compile Include="..\ExEnCommon\GameComponents\IDrawable.cs">
+      <Link>GameComponents\IDrawable.cs</Link>
+    </Compile>
+    <Compile Include="..\ExEnCommon\GameComponents\IGameComponent.cs">
+      <Link>GameComponents\IGameComponent.cs</Link>
+    </Compile>
+    <Compile Include="..\ExEnCommon\GameComponents\IUpdateable.cs">
+      <Link>GameComponents\IUpdateable.cs</Link>
+    </Compile>
+    <Compile Include="..\ExEnCommon\Game\GameCommon.cs">
+      <Link>Game\GameCommon.cs</Link>
+    </Compile>
+    <Compile Include="..\ExEnCommon\Game\GameWindow.cs">
+      <Link>Game\GameWindow.cs</Link>
+    </Compile>
+    <Compile Include="..\ExEnCommon\Game\GraphicsDeviceManagerCommon.cs">
+      <Link>Game\GraphicsDeviceManagerCommon.cs</Link>
+    </Compile>
+    <Compile Include="..\ExEnCommon\Graphics\GraphicsDeviceCommon.cs">
+      <Link>Graphics\GraphicsDeviceCommon.cs</Link>
+    </Compile>
+    <Compile Include="..\ExEnCommon\Graphics\IGraphicsDeviceService.cs">
+      <Link>Graphics\IGraphicsDeviceService.cs</Link>
+    </Compile>
+    <Compile Include="..\ExEnCommon\Graphics\SpriteBatchOpenGL.cs">
+      <Link>Graphics\SpriteBatchOpenGL.cs</Link>
+    </Compile>
+    <Compile Include="..\ExEnCommon\Graphics\SpriteFontBitmap.cs">
+      <Link>Graphics\SpriteFontBitmap.cs</Link>
+    </Compile>
+    <Compile Include="..\ExEnCommon\Graphics\StatesOpenGL\BlendState.cs">
+      <Link>Graphics\States\BlendState.cs</Link>
+    </Compile>
+    <Compile Include="..\ExEnCommon\Graphics\StatesOpenGL\DepthStencilState.cs">
+      <Link>Graphics\States\DepthStencilState.cs</Link>
+    </Compile>
+    <Compile Include="..\ExEnCommon\Graphics\StatesOpenGL\RasterizerState.cs">
+      <Link>Graphics\States\RasterizerState.cs</Link>
+    </Compile>
+    <Compile Include="..\ExEnCommon\Graphics\StatesOpenGL\SamplerState.cs">
+      <Link>Graphics\States\SamplerState.cs</Link>
+    </Compile>
+    <Compile Include="..\ExEnCommon\Graphics\Texture2DOpenGL.cs">
+      <Link>Graphics\Texture2DOpenGL.cs</Link>
+    </Compile>
+    <Compile Include="..\ExEnCommon\Input\Touch\TouchInputManager.cs">
+      <Link>Input\Touch\TouchInputManager.cs</Link>
+    </Compile>
+    <Compile Include="..\ExEnCommon\Input\Touch\TouchPanel.cs">
+      <Link>Input\Touch\TouchPanel.cs</Link>
+    </Compile>
+    <Compile Include="Audio\AudioSessionManager.cs" />
+    <Compile Include="Audio\SoundEffect.cs" />
+    <Compile Include="Audio\SoundEffectInstance.cs" />
+    <Compile Include="BatteryChargeStatus.cs" />
+    <Compile Include="Content\BuiltInLoaders.cs" />
+    <Compile Include="Content\ContentHelpers.cs" />
+    <Compile Include="ExEnEmTouchApplication.cs" />
+    <Compile Include="ExEnEmTouchGameView.cs" />
+    <Compile Include="Extensions\PointFExtensions.cs" />
+    <Compile Include="Game\Game.cs" />
+    <Compile Include="Game\GraphicsDeviceManager.cs" />
+    <Compile Include="Graphics\SurfaceFormat.cs" />
+    <Compile Include="Graphics\Texture2D.cs" />
+    <Compile Include="Input\Keyboard.cs" />
+    <Compile Include="Media\MediaPlayer.cs" />
+    <Compile Include="Media\Song.cs" />
+    <Compile Include="PerformanceCounter.cs" />
+    <Compile Include="PowerLineStatus.cs" />
+    <Compile Include="PowerStatus.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReusableItemList.cs" />
+    <Compile Include="Storage\StorageContainer.cs" />
+    <Compile Include="Storage\StorageDevice.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ExEnCore\ExEnCore MTWinDev.csproj">
+      <Project>{EBF8E4F8-A628-484A-8AE1-B69577DE5CC1}</Project>
+      <Name>ExEnCore MTWinDev</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+</Project>

@@ -1,0 +1,76 @@
+﻿ExEn was made possible through using crowd-sourced funding.
+
+http://www.rockethub.com/projects/752-exen-xna-for-iphone-android-and-silverlight
+
+I would like to thank the following people for their generous contributions:
+
+Abhishek Sood
+Adam Mowery
+Allan Hansen
+Andy Amaya
+Ants Luts
+Aranda Morrison
+Arthur Stedman
+Ben Martin
+Brian Barrett
+Bruce Jay
+Cameron Albert
+Chris Sanders
+Chris van Wyk
+Damian Yerrick
+Dan Alexander
+Daniel Frederico Lins Leite
+Dave Marks
+DIGARC-IPCA
+Donald May
+Duane Wandless
+Dug Steen
+Dustin Dahl
+Dustin Russell
+Erasmo Simo
+Gary Haussmann
+Geoff Sizemore
+Greg Bray
+Greg Shackles
+Guillaume Horel
+Henrik Holm
+Ian Biggs
+Ilya Volodin
+Imran Saadi
+James Johnston
+James Venezia
+Joakim Wik
+Jose Antonio Gallego
+Josh Elster
+Josh Petrie
+Jussi Hartzell
+Karim Hernandez
+Karl Axel Lindström
+Kenneth Baird
+Kyle Buttress
+Luis Gonzalez
+Luís Mouta
+Lutz Kretzschmar
+Mads Laumann
+Mark Allan
+Martin Oostendorp
+Michel Cruz Font
+Miguel de Icaza
+Mike Talbot
+Nathan Kerr
+Nick Westgate
+Nikhil Sinha
+Niklas Wahrman
+Oghenekevwe Igharoro
+Ovidiu Carstea
+Özden Irmak
+Philip Ludington
+Roby Atadero
+Sarah Zhao
+Saulo Alvarado Mateos
+Sean Fausett
+Steffen Itterheim
+Steve Williams
+Thomas Cowell
+Tim James
+Timo Kolwe

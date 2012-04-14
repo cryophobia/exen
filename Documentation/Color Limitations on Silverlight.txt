@@ -1,0 +1,35 @@
+ - Silverlight takes conventional colours as input (even though it converts to premultiplied colours for rendering)
+
+ - ExEnSilver caches tinted surfaces so that they can be hardware accelerated (Silverlight can do hardware-accelerated opacity, but not tinting). So if you change the tint (RGB value) of a surface, a new one is created and added to the cache. If you animate the tint, you will quickly explode the cache.
+   - To avoid exploding the cache use `HintDynamicColor` around the sprite draw. However this creates a software surface and does not perform as well as the hardware path.
+
+ - ExEnSilver uses a "Wide" version of the `Color` structure to track both the premultiplied colour (as per XNA) and the conventional colour it is derived from
+   - This allows you to modulate the colour's translucency without losing precision of the RGB channels of the conventional colour.
+   - This prevents the RGB value used by Silverlight from changing as you modulate translucency, avoiding the unnecessary creation of cached surfaces.
+
+'''For Premultiplied Alpha''' (`BlendState.AlphaBlend`)
+
+ - In normal XNA, you just store a premultiplied colour in `Color`.
+ - ExEnSilver's wider `Color` struct keeps track of the conventional colour implied by the premultiplied colour.
+ - Avoid directly creating or setting colours with fractional alpha values, as these will denormalise the stored conventional colour.
+ - Instead, use the multiply operator or `Lerp` to animate the opacity of the colour without affecting its conventional colour.
+   - Obviously if you `Lerp` between two `Color`s with different conventional colours, these will be interpolated.
+
+ - If the stored conventional does not change while animating, then you don't need to use `HintDynamicColor`
+   - Otherwise you do.
+   - Rule of thumb: changing opacity is safe and can be hardware accelerated.
+
+ - ExEnSilver currently cannot handle setting the Alpha value to zero, while setting RGB to non-zero. Normally this would cause an additive-blending effect. This ''may'' be added later.
+
+'''For all other blend states'''
+
+ - The colour for these blend states is ''not interpreted as premultiplied'' on any platform.
+
+ - These blend states use the colours from the standard store in `Color`, ignoring the conventional colour stored in the wide part.
+ - So to animate the opacity, you should set the alpha value directly: `new Color(1f, 0.5f, 0f, animated)` (or the equivalent using `Lerp`).
+   - Lerping with `Black` or `Transparent`, or using the multiply operator (equivalent to lerping with transparent), to change the opacity of an additive blend, will modify the RGB values used and so require `HintDynamicColor`.
+     - (Additionally using the multiply operator / lerping with transparent will produce a quadratic function on all platforms, not a linear one as you might expect.)
+
+ - `BlendState.NonPremultipled` interprets colours the same as XNA would, however Silverlight has no mechanism for handling non-premultiplied textures so results will not match exactly.
+
+ - Obviously you can't change the opacity with `BlendState.Opaque` anyway.

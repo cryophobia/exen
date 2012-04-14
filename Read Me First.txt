@@ -1,0 +1,12 @@
+Welcome to ExEn!
+
+ExEn is currently in public-preview mode, and so it is a little rough around the edges! The documentation folder contains some peliminary documentation that has been copied from the ExEn Trac wiki.
+
+To learn how to port a game using ExEn, read the document "Porting Checklist".
+
+Please note that, if you try to build any of the ExEn projects first, you will come across an error about missing "exenfont" files. These files are generated when you build the XNA project (using ExEnFontShim).
+
+Good luck!
+- Andrew Russell
+
+http://andrewrussell.net/exen/

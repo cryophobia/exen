@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual C# Express 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlankGame MTWinDev", "BlankGame\BlankGame MTWinDev.csproj", "{E7D2798F-3913-49A7-8455-8901F9CFA8B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExEnCore MTWinDev", "ExEnCore\ExEnCore MTWinDev.csproj", "{EBF8E4F8-A628-484A-8AE1-B69577DE5CC1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExEnEmTouch MTWinDev", "ExEnEmTouch\ExEnEmTouch MTWinDev.csproj", "{1C7408DF-F179-4540-B3D0-CE068C27CE1E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Marblets MTWinDev", "Samples\Marblets\Marblets MTWinDev.csproj", "{EC65A63E-8EBC-4CCC-B4DA-4818F6BB34E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CatGirls MTWinDev", "Samples\CatGirls\CatGirls MTWinDev.csproj", "{DF0346BD-6259-41B7-BF42-4318FDDC4CD5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orientation MTWinDev", "Samples\Orientation\Orientation MTWinDev.csproj", "{99ABAF66-0B77-409F-8FBF-B1468F5AAAC0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E7D2798F-3913-49A7-8455-8901F9CFA8B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7D2798F-3913-49A7-8455-8901F9CFA8B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7D2798F-3913-49A7-8455-8901F9CFA8B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7D2798F-3913-49A7-8455-8901F9CFA8B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBF8E4F8-A628-484A-8AE1-B69577DE5CC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBF8E4F8-A628-484A-8AE1-B69577DE5CC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBF8E4F8-A628-484A-8AE1-B69577DE5CC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBF8E4F8-A628-484A-8AE1-B69577DE5CC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C7408DF-F179-4540-B3D0-CE068C27CE1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C7408DF-F179-4540-B3D0-CE068C27CE1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C7408DF-F179-4540-B3D0-CE068C27CE1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C7408DF-F179-4540-B3D0-CE068C27CE1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC65A63E-8EBC-4CCC-B4DA-4818F6BB34E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC65A63E-8EBC-4CCC-B4DA-4818F6BB34E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC65A63E-8EBC-4CCC-B4DA-4818F6BB34E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC65A63E-8EBC-4CCC-B4DA-4818F6BB34E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF0346BD-6259-41B7-BF42-4318FDDC4CD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF0346BD-6259-41B7-BF42-4318FDDC4CD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF0346BD-6259-41B7-BF42-4318FDDC4CD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF0346BD-6259-41B7-BF42-4318FDDC4CD5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99ABAF66-0B77-409F-8FBF-B1468F5AAAC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99ABAF66-0B77-409F-8FBF-B1468F5AAAC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99ABAF66-0B77-409F-8FBF-B1468F5AAAC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99ABAF66-0B77-409F-8FBF-B1468F5AAAC0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

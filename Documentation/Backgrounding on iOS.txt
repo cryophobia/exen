@@ -1,0 +1,13 @@
+The `Game` class for iOS has two additional events that you can hook or override:
+
+{{{
+public event EventHandler EnterForeground;
+protected virtual void OnEnterForeground(object sender, EventArgs args);
+
+public event EventHandler EnterBackground;
+protected virtual void OnEnterBackground(object sender, EventArgs args);
+}}}
+
+These will notify you if your game is being backgrouneded or foregrounded (iOS multi-tasking).
+
+The `Activated` and `Deactivated` (standard in XNA) events will trigger on incoming calls, alerts, the task-switching bar being displayed, etc.

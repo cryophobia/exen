@@ -1,0 +1,104 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlankGame-MonoTouch", "BlankGame\BlankGame-MonoTouch.csproj", "{212743BF-5354-4087-A86D-3CBE5F555AB1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExEnCore MonoTouch", "ExEnCore\ExEnCore MonoTouch.csproj", "{4740C1D7-5EE0-43AC-A862-45B8D245FC43}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExEnEmTouch", "ExEnEmTouch\ExEnEmTouch.csproj", "{F7E52764-6042-4D0D-AAB6-E7938B88B93D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Marblets-MonoTouch", "Samples\Marblets\Marblets-MonoTouch.csproj", "{C785255B-CF8B-424D-9360-02C314761EF4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CatGirls-MonoTouch", "Samples\CatGirls\CatGirls-MonoTouch.csproj", "{C97ACCC8-1172-4146-BC53-A67E9804F095}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orientation-MonoTouch", "Samples\Orientation\Orientation-MonoTouch.csproj", "{07D81CC3-BE12-4E15-BEDF-C7BAC8275B41}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|iPhoneSimulator = Debug|iPhoneSimulator
+		Release|iPhoneSimulator = Release|iPhoneSimulator
+		Debug|iPhone = Debug|iPhone
+		Release|iPhone = Release|iPhone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{07D81CC3-BE12-4E15-BEDF-C7BAC8275B41}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{07D81CC3-BE12-4E15-BEDF-C7BAC8275B41}.Debug|iPhone.Build.0 = Debug|iPhone
+		{07D81CC3-BE12-4E15-BEDF-C7BAC8275B41}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{07D81CC3-BE12-4E15-BEDF-C7BAC8275B41}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{07D81CC3-BE12-4E15-BEDF-C7BAC8275B41}.Release|iPhone.ActiveCfg = Release|iPhone
+		{07D81CC3-BE12-4E15-BEDF-C7BAC8275B41}.Release|iPhone.Build.0 = Release|iPhone
+		{07D81CC3-BE12-4E15-BEDF-C7BAC8275B41}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{07D81CC3-BE12-4E15-BEDF-C7BAC8275B41}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{212743BF-5354-4087-A86D-3CBE5F555AB1}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{212743BF-5354-4087-A86D-3CBE5F555AB1}.Debug|iPhone.Build.0 = Debug|iPhone
+		{212743BF-5354-4087-A86D-3CBE5F555AB1}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{212743BF-5354-4087-A86D-3CBE5F555AB1}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{212743BF-5354-4087-A86D-3CBE5F555AB1}.Release|iPhone.ActiveCfg = Release|iPhone
+		{212743BF-5354-4087-A86D-3CBE5F555AB1}.Release|iPhone.Build.0 = Release|iPhone
+		{212743BF-5354-4087-A86D-3CBE5F555AB1}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{212743BF-5354-4087-A86D-3CBE5F555AB1}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{4740C1D7-5EE0-43AC-A862-45B8D245FC43}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{4740C1D7-5EE0-43AC-A862-45B8D245FC43}.Debug|iPhone.Build.0 = Debug|iPhone
+		{4740C1D7-5EE0-43AC-A862-45B8D245FC43}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{4740C1D7-5EE0-43AC-A862-45B8D245FC43}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{4740C1D7-5EE0-43AC-A862-45B8D245FC43}.Release|iPhone.ActiveCfg = Release|iPhone
+		{4740C1D7-5EE0-43AC-A862-45B8D245FC43}.Release|iPhone.Build.0 = Release|iPhone
+		{4740C1D7-5EE0-43AC-A862-45B8D245FC43}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{4740C1D7-5EE0-43AC-A862-45B8D245FC43}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{C785255B-CF8B-424D-9360-02C314761EF4}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{C785255B-CF8B-424D-9360-02C314761EF4}.Debug|iPhone.Build.0 = Debug|iPhone
+		{C785255B-CF8B-424D-9360-02C314761EF4}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{C785255B-CF8B-424D-9360-02C314761EF4}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{C785255B-CF8B-424D-9360-02C314761EF4}.Release|iPhone.ActiveCfg = Release|iPhone
+		{C785255B-CF8B-424D-9360-02C314761EF4}.Release|iPhone.Build.0 = Release|iPhone
+		{C785255B-CF8B-424D-9360-02C314761EF4}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{C785255B-CF8B-424D-9360-02C314761EF4}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{C97ACCC8-1172-4146-BC53-A67E9804F095}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{C97ACCC8-1172-4146-BC53-A67E9804F095}.Debug|iPhone.Build.0 = Debug|iPhone
+		{C97ACCC8-1172-4146-BC53-A67E9804F095}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{C97ACCC8-1172-4146-BC53-A67E9804F095}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{C97ACCC8-1172-4146-BC53-A67E9804F095}.Release|iPhone.ActiveCfg = Release|iPhone
+		{C97ACCC8-1172-4146-BC53-A67E9804F095}.Release|iPhone.Build.0 = Release|iPhone
+		{C97ACCC8-1172-4146-BC53-A67E9804F095}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{C97ACCC8-1172-4146-BC53-A67E9804F095}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{F7E52764-6042-4D0D-AAB6-E7938B88B93D}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{F7E52764-6042-4D0D-AAB6-E7938B88B93D}.Debug|iPhone.Build.0 = Debug|iPhone
+		{F7E52764-6042-4D0D-AAB6-E7938B88B93D}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{F7E52764-6042-4D0D-AAB6-E7938B88B93D}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{F7E52764-6042-4D0D-AAB6-E7938B88B93D}.Release|iPhone.ActiveCfg = Release|iPhone
+		{F7E52764-6042-4D0D-AAB6-E7938B88B93D}.Release|iPhone.Build.0 = Release|iPhone
+		{F7E52764-6042-4D0D-AAB6-E7938B88B93D}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{F7E52764-6042-4D0D-AAB6-E7938B88B93D}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Samples\Marblets\Marblets-MonoTouch.csproj
+		Policies = $0
+		$0.TextStylePolicy = $1
+		$1.TabWidth = 4
+		$1.inheritsSet = Mono
+		$1.inheritsScope = text/plain
+		$1.scope = text/x-csharp
+		$0.CSharpFormattingPolicy = $2
+		$2.BeforeMethodDeclarationParentheses = False
+		$2.BeforeMethodCallParentheses = False
+		$2.BeforeConstructorDeclarationParentheses = False
+		$2.BeforeDelegateDeclarationParentheses = False
+		$2.NewParentheses = False
+		$2.IfParentheses = False
+		$2.WhileParentheses = False
+		$2.ForParentheses = False
+		$2.ForeachParentheses = False
+		$2.CatchParentheses = False
+		$2.SwitchParentheses = False
+		$2.LockParentheses = False
+		$2.UsingParentheses = False
+		$2.inheritsSet = Mono
+		$2.inheritsScope = text/x-csharp
+		$2.scope = text/x-csharp
+		$0.TextStylePolicy = $3
+		$3.TabWidth = 4
+		$3.inheritsSet = Mono
+		$3.inheritsScope = text/plain
+		$3.scope = text/plain
+	EndGlobalSection
+EndGlobal

@@ -89,6 +89,11 @@ namespace Microsoft.Xna.Framework.Graphics
 		{
 			get { return new Rectangle(0, 0, logicalWidth, logicalHeight); }
 		}
+		
+		public bool IsDisposed 
+		{
+			get { return disposed; }
+		}
 
 		#endregion
 

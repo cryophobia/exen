@@ -59,6 +59,14 @@ namespace Microsoft.Xna.Framework.Graphics
 				disposed = true;
 			}
 		}
+		
+		public bool IsDisposed 
+		{
+			get
+			{
+				return disposed;	
+			}
+		}
 
 		#endregion
 
